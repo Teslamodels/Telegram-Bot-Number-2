@@ -4,7 +4,7 @@ from psycopg2 import Error
 
 def create_new_table():
     try:
-        connection = psycopg2.connect(user = "postgres", password = "postgres", host = "localhost", port = 5432, database = "bot_db")
+        connection = psycopg2.connect(user = "DB_USER", password = "DB_PASSWORD", host = "localhost", port = 5432, database = "DB_BOT")
         cursor=connection.cursor()
         create_account = """CREATE TABLE Account(
                                 ID SERIAL PRIMARY KEY,
